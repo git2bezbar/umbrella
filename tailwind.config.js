@@ -20,6 +20,7 @@ module.exports = {
       colors: {
         'primary': '#6624FF',
         'black': '#131313',
+        'input': '#F1F1F1'
       },
       borderRadius: {
         'ui': '10px'
