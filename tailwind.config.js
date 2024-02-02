@@ -19,9 +19,13 @@ module.exports = {
     extend: {
       colors: {
         'primary': '#6624FF',
+        'black': '#131313',
       },
       borderRadius: {
         'ui': '10px'
+      },
+      fontFamily: {
+        'raleway': ['Raleway', 'sans-serif'],
       },
       keyframes: {
         "accordion-down": {
