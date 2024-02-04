@@ -10,7 +10,9 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     const conditionalClassnames = 
       type === "file" 
       ? ""
-      : "rounded-ui border border-black/10 bg-white";
+      : type === "color" 
+        ? "absolute bottom-0 right-0 opacity-0"
+        : "rounded-ui border border-black/10 bg-white";
 
     return (
       <input
