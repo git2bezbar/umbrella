@@ -1,3 +1,4 @@
+import { ComponentPropsWithoutRef, ReactNode } from "react";
 import { Label } from "./label";
 import { Switch } from "./switch";
 
@@ -20,14 +21,19 @@ const CircleGroup = () => (
   </div>
 )
 
-const DraggableItem  = () => {
+export interface DraggableItemProps {
+  itemName: string;
+  children: ReactNode;
+}
+
+const DraggableItem = ({ itemName, children, ...rest }:DraggableItemProps) => {
   return(
     <div className="flex justify-between items-center p-4 rounded-ui border border-black/10 bg-white min-w-60" draggable>
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-4 w-full">
         <CircleGroup />
-        <Label className="cursor-pointer" htmlFor="myDraggable">my Draggable</Label>
+        <Label className="cursor-pointer w-full" htmlFor={itemName}>{children}</Label>
       </div>
-      <Switch id="myDraggable" />
+      <Switch id={itemName} {...rest} />
     </div>
   )
 }
