@@ -21,19 +21,20 @@ const CircleGroup = () => (
   </div>
 )
 
-export interface DraggableItemProps {
+export interface DraggableItemProps extends ComponentPropsWithoutRef<'div'> {
   itemName: string;
   children: ReactNode;
+  disabled: boolean;
 }
 
-const DraggableItem = ({ itemName, children, ...rest }:DraggableItemProps) => {
+const DraggableItem = ({ itemName, children, disabled }:DraggableItemProps) => {
   return(
-    <div className="flex justify-between items-center p-4 rounded-ui border border-black/10 bg-white min-w-60" draggable>
+    <div className={`flex justify-between items-center p-4 rounded-ui border border-black/10 bg-white min-w-60 ${ disabled ? "opacity-50 pointer-events-none" : ""}`} draggable>
       <div className="flex items-center gap-4 w-full">
         <CircleGroup />
         <Label className="cursor-pointer w-full" htmlFor={itemName}>{children}</Label>
       </div>
-      <Switch id={itemName} {...rest} />
+      <Switch id={itemName} />
     </div>
   )
 }
