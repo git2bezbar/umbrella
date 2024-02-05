@@ -1,6 +1,9 @@
 <div align="center">
 <br />
-<p><bold>☂️ Umbrella UI React components based an @shadcn-ui</bold></p>
+
+![umbrella-light](https://github.com/git2bezbar/umbrella/assets/58217204/6754905b-fb91-47fa-8e73-64818b68b378)
+
+<p><b>☂️ Umbrella UI React components based on <a href="https://ui.shadcn.com">@shadn-ui</a></b></p>
 </div>
 
 ## Development
