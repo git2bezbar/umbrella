@@ -20,3 +20,5 @@ export {
   TableHeader,
   TableRow,
 } from '@/components/ui/table'
+
+export * from '@/lib/utils'
