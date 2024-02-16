@@ -1,5 +1,5 @@
 {
-  "name": "umbrella",
+  "name": "@fork2e/umbrella",
   "version": "0.0.1",
   "type": "module",
   "scripts": {
@@ -49,5 +49,23 @@
     "storybook": "^7.6.14",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.2.2"
-  }
+  },
+  "description": "☂️ Umbrella UI React components based on @shadcn-ui",
+  "main": "src/index.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/git2bezbar/umbrella.git"
+  },
+  "keywords": [
+    "umbrella",
+    "umbrella-ui",
+    "ui-kit",
+    "ui"
+  ],
+  "author": "Adem Duran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/git2bezbar/umbrella/issues"
+  },
+  "homepage": "https://github.com/git2bezbar/umbrella#readme"
 }
