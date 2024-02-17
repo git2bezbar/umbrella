@@ -1,13 +1,32 @@
-import path from "path"
-import react from "@vitejs/plugin-react"
-import { defineConfig } from "vite"
-import reactRefresh from "@vitejs/plugin-react-refresh"
- 
+import { defineConfig } from 'vite'
+import { resolve } from 'path'
+import { dependencies } from './package.json'
+import react from '@vitejs/plugin-react'
+import dts from 'vite-plugin-dts';
+
 export default defineConfig({
-  plugins: [react(), reactRefresh()],
+  plugins: [
+    react(),
+    dts({
+      include: ['src/**/*'],
+    })
+  ],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
+      "@": resolve(__dirname, "./src"),
     },
   },
+  build: {
+    lib: {
+      entry: resolve(__dirname, 'src', 'index.ts'),
+      formats: ['es', 'cjs'],
+      fileName: (ext) => `index.${ext}.js`,
+    },
+    rollupOptions: {
+      external: [...Object.keys(dependencies)], output: { preserveModules: true, exports: 'named' }
+    },
+    
+    target: 'esnext',
+    sourcemap: true
+  }
 })
