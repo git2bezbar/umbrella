@@ -24,7 +24,7 @@ const CircleGroup = () => (
 export interface DraggableItemProps extends ComponentPropsWithoutRef<'div'> {
   itemName: string;
   children: ReactNode;
-  disabled: boolean;
+  disabled?: boolean;
 }
 
 const DraggableItem = ({ itemName, children, disabled }:DraggableItemProps) => {
