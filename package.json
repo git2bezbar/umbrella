@@ -1,7 +1,7 @@
 {
   "name": "@fork2e/umbrella",
   "description": "☂️ Umbrella UI React components based on @shadcn-ui",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "type": "module",
   "main": "dist/lib.cjs.js",
   "module": "dist/lib/esm/index.js",
