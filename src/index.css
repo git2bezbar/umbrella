@@ -1,25 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@font-face {
-  font-family: 'Raleway';
-  src: url('./assets/fonts/medium.ttf');
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: 'Raleway';
-  src: url('./assets/fonts/semi-bold.ttf');
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: 'Raleway';
-  src: url('./assets/fonts/bold.ttf');
-  font-weight: 700;
-}
-
-html {
-  font-family: 'Raleway', sans-serif;
-}

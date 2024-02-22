@@ -25,9 +25,6 @@ module.exports = {
       borderRadius: {
         'ui': '10px'
       },
-      fontFamily: {
-        'raleway': ['Raleway', 'sans-serif'],
-      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
